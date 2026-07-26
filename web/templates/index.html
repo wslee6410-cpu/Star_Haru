@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>🍀 행복로또번호 생성기</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>🍀 행복로또번호 자동 생성기</h1>
+
+    <form action="/generate" method="post">
+        <label>생성할 세트 수: <input type="number" name="count" value="5" min="1" max="20"></label>
+        <button type="submit">생성하기</button>
+    </form>
+
+    {% if numbers %}
+        <h2>✅ 생성된 번호</h2>
+        <ul>
+        {% for row in numbers %}
+            <li>{{ row }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+    <a href="/analyze">📊 당첨 번호 분석하기</a>
+
+    {% if frequent %}
+        <h2>📊 자주 나온 번호</h2>
+        <ul>
+        {% for num, cnt in frequent %}
+            <li>{{ num }} → {{ cnt }}회</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
