@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- ============================================================
 
 README.md
@@ -569,3 +570,7 @@ python -m unittest tests.test\_generator<!-- ===================================
 
 
 
+=======
+# Star_Haru
+personal storge
+>>>>>>> 5e8b32edd72d4b9f6b8eb96b2d037cf047d35d4e
